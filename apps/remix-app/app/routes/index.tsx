@@ -1,4 +1,5 @@
 import { Button } from "ui";
+import "ui/dist/index.css";
 
 export default function Index() {
   return (

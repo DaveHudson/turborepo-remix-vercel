@@ -11,9 +11,9 @@
     "dist/**"
   ],
   "scripts": {
-    "prebuild": "npx tailwindcss build -i ./tailwind.css -o ./src/tailwind.css",
+    "prebuild": "npx tailwindcss build -i ./tailwind.css -o ../../apps/remix-app/app/uikit.css && npx tailwindcss build -i ./tailwind.css -o ./src/tailwind.css",
     "build": "tsup src/index.tsx --format esm,cjs --dts --external react",
-    "predev": "npx tailwindcss build -i ./tailwind.css -o ./src/tailwind.css --watch",
+    "predev": "npx tailwindcss build -i ./tailwind.css -o ./src/tailwind.css && npx tailwindcss build -i ./tailwind.css -o ../../apps/remix-app/app/uikit.css",
     "dev": "tsup src/index.tsx --format esm,cjs --watch --dts --external react"
   },
   "devDependencies": {

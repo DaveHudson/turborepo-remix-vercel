@@ -1,8 +1,10 @@
 import { Links, LinksFunction, LiveReload, Meta, Outlet, Scripts, ScrollRestoration } from "remix";
 import type { MetaFunction } from "remix";
 import styles from "./tailwind.css";
+import uistyles from "./uikit.css";
 
 export let links: LinksFunction = () => {
+  return [{ rel: "stylesheet", href: uistyles }];
   return [{ rel: "stylesheet", href: styles }];
 };
 
